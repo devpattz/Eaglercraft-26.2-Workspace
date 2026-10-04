@@ -314,7 +314,7 @@ public class EaglerProfile {
 		String loadUsername = profile.getStringOr("username", "").trim();
 
 		if(!loadUsername.isEmpty()) {
-			username = loadUsername.replaceAll("[^A-Za-z0-9]", "_");
+			username = loadUsername.replaceAll("[^A-Za-z0-9.]", "_");
 		}
 
 		clearCustomSkins();

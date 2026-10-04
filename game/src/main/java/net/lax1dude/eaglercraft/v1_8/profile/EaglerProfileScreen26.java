@@ -189,7 +189,7 @@ public class EaglerProfileScreen26 extends Screen {
 		this.usernameField.setMaxLength(16);
 		this.usernameField.setValue(usernameValue);
 		this.usernameField.setResponder(str -> {
-			String sanitized = str.replaceAll("[^A-Za-z0-9]", "_");
+			String sanitized = str.replaceAll("[^A-Za-z0-9.]", "_");
 			if(!sanitized.equals(str)) {
 				this.usernameField.setValue(sanitized);
 			}else {
@@ -405,7 +405,7 @@ public class EaglerProfileScreen26 extends Screen {
 			EaglerProfile.presetSkinId = selectedSlot - customLen;
 			EaglerProfile.customSkinId = -1;
 		}
-		String name = usernameValue == null ? "" : usernameValue.trim().replaceAll("[^A-Za-z0-9]", "_");
+		String name = usernameValue == null ? "" : usernameValue.trim().replaceAll("[^A-Za-z0-9.]", "_");
 		while(name.length() < 3) {
 			name = name + "_";
 		}

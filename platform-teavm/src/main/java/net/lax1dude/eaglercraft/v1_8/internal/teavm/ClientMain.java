@@ -773,7 +773,7 @@ public class ClientMain {
 			if(b != null) {
 				String s = (new String(b, StandardCharsets.UTF_8)).trim();
 				if(!s.isEmpty()) {
-					return s.replaceAll("[^A-Za-z0-9]", "_");
+					return s.replaceAll("[^A-Za-z0-9.]", "_");
 				}
 			}
 		}catch(Throwable t) {
